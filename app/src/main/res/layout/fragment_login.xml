@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   tools:context=".auth_feature.ui.view.login.LoginFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+
+      <ImageView
+         android:id="@+id/imageViewWelcome"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="16dp"
+         android:layout_marginEnd="8dp"
+         android:src="@drawable/welcome"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+
+      <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="72dp"
+         android:layout_marginBottom="4dp"
+         android:fontFamily="@font/nunitosans_bold"
+         android:text="Login"
+         android:textColor="@color/black"
+         android:textSize="12sp"
+         app:layout_constraintBottom_toTopOf="@id/ed_login"
+         app:layout_constraintStart_toStartOf="@id/ed_login" />
+
+      <EditText
+         android:id="@+id/ed_login"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="32dp"
+         android:layout_marginTop="42dp"
+         android:layout_marginEnd="32dp"
+         android:background="@android:color/transparent"
+         android:fontFamily="@font/nunitosans_light"
+         android:hint="login"
+         android:inputType="textEmailAddress"
+         android:textColor="@color/black"
+         android:textColorHint="@color/light_gray"
+         android:textSize="16sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/imageViewWelcome" />
+
+      <View
+         android:id="@+id/view_login"
+         android:layout_width="0dp"
+         android:layout_height="1dp"
+         android:layout_marginTop="16dp"
+         android:background="@color/light_gray"
+         app:layout_constraintEnd_toEndOf="@id/ed_login"
+         app:layout_constraintStart_toStartOf="@id/ed_login"
+         app:layout_constraintTop_toBottomOf="@id/ed_login" />
+
+      <TextView
+         android:id="@+id/textView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:fontFamily="@font/nunitosans_bold"
+         android:layout_marginBottom="4dp"
+         android:text="password"
+         android:textColor="@color/black"
+         android:textSize="12sp"
+         app:layout_constraintBottom_toTopOf="@id/ed_password"
+         app:layout_constraintStart_toStartOf="@id/ed_password" />
+
+      <EditText
+         android:id="@+id/ed_password"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="42dp"
+         android:background="@android:color/transparent"
+         android:fontFamily="@font/nunitosans_light"
+         android:hint="password"
+         android:inputType="textPassword"
+         android:textColor="@color/black"
+         android:textColorHint="@color/light_gray"
+         android:textSize="16sp"
+         app:layout_constraintEnd_toEndOf="@id/view_login"
+         app:layout_constraintStart_toStartOf="@+id/view_login"
+         app:layout_constraintTop_toBottomOf="@+id/view_login" />
+
+      <View
+         android:id="@+id/view_password"
+         android:layout_width="0dp"
+         android:layout_height="1dp"
+         android:layout_marginTop="16dp"
+         android:background="@color/light_gray"
+         app:layout_constraintEnd_toEndOf="@id/ed_password"
+         app:layout_constraintStart_toStartOf="@id/ed_password"
+         app:layout_constraintTop_toBottomOf="@id/ed_password" />
+
+      <TextView
+         android:id="@+id/txt_error"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+         android:fontFamily="@font/nunitosans_semibold"
+         android:text="Error"
+         android:textColor="@color/highlight_text_color"
+         android:textSize="14sp"
+         android:visibility="invisible"
+         app:layout_constraintStart_toStartOf="@id/view_password"
+         app:layout_constraintTop_toBottomOf="@id/view_password" />
+
+      <Button
+         android:id="@+id/btn_login"
+         style="@style/Widget.Material3.Button"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="120dp"
+         android:backgroundTint="@color/black"
+         android:fontFamily="@font/nunitosans_bold"
+         android:text="sign in"
+         android:textAllCaps="true"
+         android:textColor="@color/white"
+         android:textSize="16sp"
+         app:layout_constraintEnd_toEndOf="@+id/view_password"
+         app:layout_constraintStart_toStartOf="@+id/view_password"
+         app:layout_constraintTop_toBottomOf="@+id/view_password" />
+
+      <ProgressBar
+         android:id="@+id/progressBar"
+         android:layout_width="40dp"
+         android:layout_height="40dp"
+         android:layout_marginTop="62dp"
+         android:visibility="invisible"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/view_password" />
+
+
+      <!--      <TextView-->
+      <!--         android:id="@+id/btn_sign_up"-->
+      <!--         android:layout_width="wrap_content"-->
+      <!--         android:layout_height="wrap_content"-->
+      <!--         android:layout_gravity="center"-->
+      <!--         android:layout_marginTop="20dp"-->
+      <!--         android:fontFamily="@font/sf_pro_display_semibold"-->
+      <!--         android:text="@string/txt_no_account_signup"-->
+      <!--         android:textSize="14sp" />-->
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
